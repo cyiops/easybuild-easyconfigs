@@ -1,6 +1,6 @@
 This file contains a description of the major changes to the easybuild-easyconfigs EasyBuild package.
 For more detailed information, please see the git log.
-
+Andreas
 These release notes can also be consulted at http://easybuild.readthedocs.org/en/latest/Release_notes.html.
 
 The latest version of easybuild-easyconfig provides 3,066 easyconfig files, for 551 different software packages
