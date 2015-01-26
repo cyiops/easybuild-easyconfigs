@@ -1,0 +1,22 @@
+easyblock = "Binary"
+
+name = 'Beagle'
+version = '4.0'
+
+homepage = 'http://faculty.washington.edu/browning/beagle/beagle.html'
+description = """Beagle performs genotype calling, genotype phasing, imputation of ungenotyped markers, and identity-by-descent segment detection."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+sources = ['%s.r1398.jar' % name.lower()]
+source_urls = ['http://faculty.washington.edu/browning/beagle']
+
+install_cmd = "cp -a beagle.r1398.jar  %(installdir)s/beagle.jar && chmod +x %(installdir)s/beagle.jar"
+
+sanity_check_paths = {
+    'files': ["beagle.jar"],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
+
