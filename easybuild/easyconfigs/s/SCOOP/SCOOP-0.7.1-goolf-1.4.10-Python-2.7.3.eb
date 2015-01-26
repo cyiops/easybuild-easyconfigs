@@ -1,0 +1,36 @@
+easyblock = "PythonPackage"
+
+name = 'SCOOP'
+version = '0.7.1'
+
+homepage = 'http://code.google.com/p/scoop/'
+description = """SCOOP (Scalable COncurrent Operations in Python) is a distributed task module
+ allowing concurrent parallel programming on various environments, from heterogeneous grids to supercomputers."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+source_urls = ["http://scoop.googlecode.com/files/"]
+sources = ['%s-%s.release.tar.gz' % (name.lower(), version)]
+#sources = [SOURCELOWER_TAR_GZ]
+
+patches = ['scoop.patch']
+
+python = 'Python'
+pythonversion = '2.7.3'
+pyshortver = ".".join(pythonversion.split(".")[:-1])
+versionsuffix = '-%s-%s' % (python, pythonversion)
+zmqapi = 4
+
+dependencies = [
+    (python, pythonversion),  # python with builtin argparse
+    ('Greenlet', '0.4.0', versionsuffix),
+    ('PyZMQ', '2.2.0.1', '%s-zmq%s' % (versionsuffix, zmqapi)),
+]
+
+
+sanity_check_paths = {
+    'dirs': [],
+    'files': ['lib/python%(pyv)s/site-packages/scoop-%%(version)s.release-py%(pyv)s.egg' % {'pyv': pyshortver}],
+}
+
+moduleclass = 'tools'

@@ -1,0 +1,24 @@
+name = 'libMesh'
+version = '0.9.3'
+
+homepage = 'http://libmesh.github.io/'
+description = "The libMesh library provides a framework for the numerical simulation of partial differential equations using arbitrary unstructured discretizations on serial and parallel platforms."
+
+toolchain = {'name': 'gmpolf', 'version': '1.4.8'}
+toolchainopts = {'optarch': True}
+
+source_urls = ['https://github.com/libMesh/libmesh/releases/download/v%s/' % version]
+sources = [SOURCELOWER_TAR_GZ]
+
+configopts = '--with-petsc=$EBROOTPETSC'
+
+dependencies = [
+	('PETSc','3.3-p2','-Python-2.7.3'),
+]
+
+sanity_check_paths = {
+    	'files': ["bin/%s" % x for x in ["libmesh-config", "meshbcid-devel", "output_libmesh_version-dbg"]],
+	'dirs': ["bin", "contrib", "etc", "examples", "include", "lib", "share"],
+}
+
+moduleclass = 'lib'

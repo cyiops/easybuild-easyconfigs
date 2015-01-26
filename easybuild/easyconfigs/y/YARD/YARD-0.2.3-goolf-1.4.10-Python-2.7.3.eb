@@ -1,0 +1,33 @@
+easyblock = "PythonPackage"
+
+name = 'YARD'
+version = '0.2.3'
+
+homepage = 'https://pypi.python.org/pypi/yard'
+description = """This is yet another Python package for drawing ROC curves. It also lets you draw precision-recall, accumulation and concentrated ROC (CROC) curves, sensitivity-specificity plots, F-score curves and calculate the AUC (area under curve) statistics. The significance of differences between AUC scores can also be tested using paired permutation tests."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+
+source_urls = ['http://pypi.python.org/packages/source/y/%s/' % name.lower()]
+sources = ['%s-%s.tar.gz' % (name.lower(), version)]
+#sources = [SOURCE_TAR_GZ]
+
+python = "Python"
+pythonversion = '2.7.3'
+pythonshortversion = ".".join(pythonversion.split(".")[:-1])
+
+versionsuffix = "-%s-%s" % (python, pythonversion)
+
+dependencies = [
+    (python, pythonversion),
+    ('matplotlib', '1.2.1', versionsuffix),
+    ('numpy', '1.6.2', versionsuffix)
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['.'],
+}
+
+moduleclass = 'vis'

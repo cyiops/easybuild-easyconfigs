@@ -1,0 +1,36 @@
+--- customize.py.orig	2014-04-08 12:59:47.000000000 +0300
++++ customize.py	2014-09-24 10:46:06.459369537 +0300
+@@ -7,11 +7,13 @@
+ #To append use the form
+ #     libraries += ['somelib','otherlib']
+ 
++import os
++
+ #compiler = 'mpcc'
+-#libraries = []
++libraries = [libfile[3:-2] for libfile in os.getenv('LAPACK_MT_STATIC_LIBS').split(',')]
+ #libraries += []
+ 
+-#library_dirs = []
++library_dirs = os.getenv('LD_LIBRARY_PATH').split(':')
+ #library_dirs += []
+ 
+ #include_dirs = []
+@@ -69,10 +71,11 @@
+ # In order to link libxc installed in a non-standard location
+ # (e.g.: configure --prefix=/home/user/libxc-2.0.1-1), use:
+ # - static linking:
+-#include_dirs += ['/home/user/libxc-2.0.1-1/include']
+-#extra_link_args += ['/home/user/libxc-2.0.1-1/lib/libxc.a']
+-#if 'xc' in libraries: libraries.remove('xc')
++library_xc = os.getenv('EBROOTLIBXC')
++include_dirs += ['%s/include' % library_xc ]
++extra_link_args += ['%s/lib/libxc.a' % library_xc ] 
++if 'xc' in libraries: libraries.remove('xc')
+ # - dynamic linking (requires also setting LD_LIBRARY_PATH at runtime):
+-#include_dirs += ['/home/user/libxc-2.0.1-1/include']
+-#library_dirs += ['/home/user/libxc-2.0.1-1/lib']
+-#if 'xc' not in libraries: libraries.append('xc')
++include_dirs += ['%s/include' % library_xc ]
++library_dirs += ['%s/lib' % library_xc ]
++if 'xc' not in libraries: libraries.append('xc')
