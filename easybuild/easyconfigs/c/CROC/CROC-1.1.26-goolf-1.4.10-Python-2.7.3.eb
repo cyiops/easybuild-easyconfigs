@@ -1,0 +1,31 @@
+easyblock = "PythonPackage"
+
+name = 'CROC'
+version = '1.1.26'
+
+homepage = ''
+description = """A package for calculating ROC curves and Concentrated ROC (CROC) curves."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+
+source_urls = ['http://pypi.python.org/packages/source/C/%s/' % name]
+sources = ['%s-%s.tar.gz' % (name, version)]
+
+python = "Python"
+pythonversion = '2.7.3'
+pythonshortversion = ".".join(pythonversion.split(".")[:-1])
+
+versionsuffix = "-%s-%s" % (python, pythonversion)
+
+dependencies = [
+    (python, pythonversion),
+    ('sympy', '0.7.2', versionsuffix)
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['.'],
+}
+
+moduleclass = 'vis'

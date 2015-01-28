@@ -1,0 +1,27 @@
+easyblock = "PackedBinary"
+
+name = 'snpEff'
+version = 'latest'
+
+homepage = 'http://snpeff.sourceforge.net/'
+description = """Genetic variant annotation and effect prediction toolbox. It annotates and predicts the effects of variants on genes (such as amino acid changes)."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+sources = ['%s_%s_core.zip' % (name,version)]
+source_urls = [SOURCEFORGE_SOURCE]
+#source_urls = ['http://www.bioinformatics.babraham.ac.uk/projects/trim_galore']
+
+dependencies = [
+		('Java', '1.7.0_21'),
+]
+
+install_cmd = "cp -a snpEff/* %(installdir)s"
+
+sanity_check_paths = {
+    'files': ["snpEff.jar", "SnpSift.jar", "snpEff.config"],
+    'dirs': ["examples", "galaxy", "scripts"],
+}
+
+moduleclass = 'bio'
+

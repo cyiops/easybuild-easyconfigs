@@ -1,0 +1,32 @@
+easyblock = "PythonPackage"
+
+name = 'DEAP'
+version = '1.0.1'
+
+homepage = 'https://code.google.com/p/deap/'
+description = """DEAP is a novel evolutionary computation framework for rapid prototyping and testing of ideas. It seeks to make algorithms explicit and data structures transparent. It works in perfect harmony with parallelisation mechanism such as multiprocessing and SCOOP."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+
+source_urls = ['http://pypi.python.org/packages/source/d/%s/' % name.lower()]
+sources = ['%s-%s.tar.gz' % (name.lower(), version)]
+
+python = "Python"
+pythonversion = '2.7.3'
+pythonshortversion = ".".join(pythonversion.split(".")[:-1])
+
+versionsuffix = "-%s-%s" % (python, pythonversion)
+
+dependencies = [
+    (python, pythonversion),
+    ('matplotlib', '1.2.1', versionsuffix),
+    ('numpy', '1.6.2', versionsuffix)
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['.'],
+}
+
+moduleclass = 'vis'
