@@ -135,14 +135,14 @@ exts_list = [
     ('Rniftilib', '0.0-32', ext_options),
     ('BiocGenerics', '0.8.0', bioconductor_options),
     ('Biobase', '2.22.0', bioconductor_options),
-    ('IRanges', '1.20.5', bioconductor_options),
+    ('IRanges', '1.20.7', bioconductor_options),
     ('AnnotationDbi', '1.24.0', bioconductor_options),
     ('XVector', '0.2.0', bioconductor_options),
-    ('Biostrings', '2.30.0', bioconductor_options),
+    ('Biostrings', '2.30.1', bioconductor_options),
     ('GenomicRanges', '1.14.3', bioconductor_options),
     ('BSgenome', '1.30.0', bioconductor_options),
     ('zlibbioc', '1.8.0', bioconductor_options),
-    ('Rsamtools', '1.14.1', bioconductor_options),
+    ('Rsamtools', '1.14.3', bioconductor_options),
     ('ShortRead', '1.20.0', bioconductor_options),
     ('graph', '1.40.0', bioconductor_options),
     ('igraph0', '0.5.7', ext_options),
@@ -166,7 +166,7 @@ exts_list = [
     ('speff2trial', '1.0.4', ext_options),
     ('nleqslv', '2.1', ext_options),
     ('glmnet', '1.9-5', ext_options),
-    ('pim', '1.1.5.4', rforge_options),
+    ('pim', '1.1.5.6', rforge_options),
 ]
 
 moduleclass = 'lang'
