@@ -1,0 +1,63 @@
+# Built with EasyBuild version 1.15.2 on 2014-10-31_13-53-44
+name = 'LinkTest'
+version = '1.1p5'
+homepage = 'http://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/LinkTest/linktest-download_node.html'
+
+
+toolchain = {'name': 'gompi', 'version': '1.6.10'} 
+easyblock = "MakeCp"
+
+description = """The mpilinktest program is a parallel ping-pong 
+test between all connections of a machine. Output of this program is a full
+communication matrix which shows the bandwidth between each processor
+pair and a report including the minimum bandwidth. The linktest runs
+for n processors in n steps where in each step n/2 pairs of processors
+will perform the MPI pingpong test (3 iterations, 128 kB
+messages). The selection of the pairs is random but after running all
+steps all possible pairs are covered."""
+
+source_urls = ['http://apps.fz-juelich.de/jsc/linktest//log/tmpfull0007/']
+
+sources = ['fzjlinktest-%s.tar' % version]
+
+#cmd_prefix=['cd src ;']
+
+prebuildopts = ['cd src ;']
+buildopts = '-f Makefile_LINUX SIONLIB_INST=$EBROOTSIONLIB CC=$CC'
+dependencies = [('SIONlib' , '1.5.2') ]
+
+files_to_copy = [(['src/mpilinktest','src/pingponganalysis'],'bin')]
+
+sanity_check_paths = {
+    'files': ["bin/mpilinktest", "bin/pingponganalysis"],
+    'dirs': [],
+}
+
+
+moduleclass = 'tools'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "1.15.2",
+    "easybuild-easyblocks_version": "1.15.2",
+    "timestamp": 1414760024,
+    "build_time": 59.88,
+    "install_size": 689529,
+    "command_line": ['--allow-modules-tool-mismatch', '--buildpath=/dev/shm/egregory', '--force', '--installpath=/usr/local/software/juropatest/Stage1', '--module-naming-scheme=HierarchicalMNS', '--modules-tool=Lmod', '--prefix=/usr/local/software/juropatest/Stage1', '--repositorypath=/usr/local/software/juropatest/eb_repo', '--robot=/usr/local/software/juropatest/eb_repo:/usr/local/software/juropa3p/eb_repo/', '--set-gid-bit', '--sourcepath=/usr/local/software/juropatest/sources', '--sticky-bit', '--umask=002', 'LinkTest-1.1p5-gpsmpi-2014.11.eb'],
+    "modules_tool": ('Lmod', '/usr/local/software/juropa3p/lmod/lmod/libexec/lmod', '5.7.5'),
+    "core_count": 56,
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2695 v3 @ 2.30GHz",
+    "cpu_speed": 2301.0,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/usr/local/software/juropatest/Stage1/software/Core/GCC/4.9.1/libexec/gcc/x86_64-unknown-linux-gnu/4.9.1/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran,lto --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/usr/local/software/juropatest/Stage1/software/Core/GCC/4.9.1 --with-local-prefix=/usr/local/software/juropatest/Stage1/software/Core/GCC/4.9.1; Thread model: posix; gcc version 4.9.1 (GCC) ; ",
+    "glibc_version": "2.12",
+    "hostname": "j3l03",
+    "kernel_name": "Linux",
+    "os_name": "SL",
+    "os_type": "Linux",
+    "os_version": "6.5",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.6.6 (r266:84292, Nov 21 2013, 12:39:37) ; [GCC 4.4.7 20120313 (Red Hat 4.4.7-3)]",
+    "system_gcc_path": "/usr/local/software/juropatest/Stage1/software/Core/GCC/4.9.1/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+}]
