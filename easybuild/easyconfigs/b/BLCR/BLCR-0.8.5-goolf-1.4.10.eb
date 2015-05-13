@@ -6,6 +6,7 @@
 # License:: MIT/GPL
 #
 ##
+easyblock = 'ConfigureMake'
 
 name = 'BLCR'
 version = '0.8.5'

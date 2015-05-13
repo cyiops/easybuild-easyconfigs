@@ -1,3 +1,5 @@
+easyblock = 'ConfigureMake' 
+
 name = 'bsmap'
 version = '2.74'
 

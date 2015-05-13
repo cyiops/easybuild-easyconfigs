@@ -1,3 +1,5 @@
+easyblock = 'ConfigureMake'
+
 name = 'netCDF-Fortran'
 version = '4.2'
 

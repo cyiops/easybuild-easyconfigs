@@ -1,0 +1,30 @@
+name = 'NWChem'
+version = '6.5'
+
+homepage = 'http://www.nwchem-sw.org'
+description = """NWChem aims to provide its users with computational chemistry tools that are scalable both in
+their ability to treat large scientific computational chemistry problems efficiently, and in their use of available
+parallel computing resources from high-performance parallel supercomputers to conventional workstation clusters.
+NWChem software can handle: biomolecules, nanostructures, and solid-state; from quantum to classical, and all
+combinations; Gaussian basis functions or plane-waves; scaling from one to thousands of processors; properties
+and relativity."""
+toolchain = {'name': 'ictce', 'version': '6.2.5'}
+
+source_urls = ['http://www.nwchem-sw.org/download.php?f=']
+verdate = '2014-09-10'
+sources = ['Nwchem-%s.revision26243-src.%s.tar.gz' % (version, verdate)]
+
+python = 'Python'
+pyver = '2.7.3'
+versionsuffix = '-%s-%s-%s-experimental' % (verdate, python, pyver)
+dependencies = [(python, pyver)]
+
+patches = ['NWChem_fix-date.patch']
+
+preconfigopts = 'export MRCC_METHODS=y && export CCSDTQ=y && export CCSDTLR=y && export IPCCSD=y && export EACCSD=y && '
+modules = 'all python'
+
+# more test failures than normal?
+max_fail_ratio = 0.65
+
+moduleclass = 'chem'

@@ -6,6 +6,7 @@
 # License:: MIT/GPL
 #
 ##
+easyblock = 'ConfigureMake'
 
 name = 'MATIO'
 version = '1.5.2'

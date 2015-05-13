@@ -6,6 +6,7 @@
 # License:: MIT/GPL
 #
 ##
+easyblock = 'ConfigureMake'
 
 name = 'PROJ'
 version = '4.8.0'

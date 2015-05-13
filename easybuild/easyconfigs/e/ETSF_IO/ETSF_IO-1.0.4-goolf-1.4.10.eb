@@ -6,6 +6,7 @@
 # License:: MIT/GPL
 #
 ##
+easyblock = 'ConfigureMake'
 
 name = 'ETSF_IO'
 version = '1.0.4'

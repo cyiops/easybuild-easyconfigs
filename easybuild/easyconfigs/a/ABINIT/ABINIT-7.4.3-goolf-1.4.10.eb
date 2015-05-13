@@ -6,6 +6,7 @@
 # License:: MIT/GPL
 #
 ##
+easyblock = "ConfigureMake"
 
 name = 'ABINIT'
 version = '7.4.3'
