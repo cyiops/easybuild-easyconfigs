@@ -1,0 +1,7 @@
+--- opal/etc/openmpi-mca-params.conf.orig	2015-05-19 14:29:33.688385957 +0300
++++ opal/etc/openmpi-mca-params.conf	2015-05-19 14:30:07.908701425 +0300
+@@ -56,3 +56,4 @@
+ 
+ # See "ompi_info --param all all" for a full listing of Open MPI MCA
+ # parameters available and their default values.
++orte_process_binding = core
