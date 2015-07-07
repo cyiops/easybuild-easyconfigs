@@ -41,9 +41,7 @@ ext_options = {
 }
 # Bioconductor packages have a different download url
 bioconductor_options = {
-    'source_urls': [
-    	'http://www.bioconductor.org/packages/release/bioc/src/contrib/',
-    	'http://www.bioconductor.org/packages/2.12/bioc/src/contrib/'],
+    'source_urls': ['http://www.bioconductor.org/packages/2.12/bioc/src/contrib/'],
     'source_tmpl': name_tmpl,
 }
 # !! order of packages is important !!
@@ -132,17 +130,16 @@ exts_list = [
     ('Rniftilib', '0.0-32', ext_options),
     ('BiocGenerics', '0.6.0', bioconductor_options),
     ('Biobase', '2.20.0', bioconductor_options),
-    ('IRanges', '1.18.1', bioconductor_options),
-    ('AnnotationDbi', '1.22.5', bioconductor_options),
+    ('IRanges', '1.18.3', bioconductor_options),
+    ('AnnotationDbi', '1.22.6', bioconductor_options),
     ('Biostrings', '2.28.0', bioconductor_options),
     ('GenomicRanges', '1.12.4', bioconductor_options),
     ('BSgenome', '1.28.0', bioconductor_options),
     ('zlibbioc', '1.6.0', bioconductor_options),
-    ('Rsamtools', '1.12.3', bioconductor_options),
+    ('Rsamtools', '1.12.4', bioconductor_options),
     ('ShortRead', '1.18.0', bioconductor_options),
-    ('graph', '1.38.0', bioconductor_options),
+    ('graph', '1.38.3', bioconductor_options),
     ('igraph0', '0.5.7', ext_options),
-    ('gbm', '2.1', ext_options),
 ]
 
 moduleclass = 'lang'

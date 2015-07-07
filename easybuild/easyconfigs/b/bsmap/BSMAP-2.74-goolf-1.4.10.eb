@@ -1,6 +1,6 @@
 easyblock = 'ConfigureMake' 
 
-name = 'bsmap'
+name = 'BSMAP'
 version = '2.74'
 
 homepage = 'https://code.google.com/p/bsmap/'
@@ -9,9 +9,10 @@ description = """BSMAP is a short reads mapping software for bisulfite sequencin
 toolchain = {'name': 'goolf', 'version': '1.4.10'}
 
 source_urls = ['https://bsmap.googlecode.com/files/']
-sources = ['%s-%s.tgz' % (name,version)]
+sources = [SOURCELOWER_TGZ]
 
 skipsteps = ['configure']
+
 installopts = "INSTALL_DIR=%(installdir)s"
 
 patches = [

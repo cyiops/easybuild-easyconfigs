@@ -4,14 +4,14 @@ name = 'ordereddict'
 version = '1.1'
 
 homepage = 'https://pypi.python.org/pypi/ordereddict'
-description = """Drop-in substitute for Py2.7's new collections.OrderedDict. The recipe has big-oh performance that matches regular dictionaries (amortized O(1) insertion/deletion/lookup and O(n) iteration/repr/copy/equality_testing)."""
-
+description = """Drop-in substitute for Py2.7's new collections.OrderedDict. 
+The recipe has big-oh performance that matches regular dictionaries (amortized 
+O(1) insertion/deletion/lookup and O(n) iteration/repr/copy/equality_testing)."""
 
 toolchain = {'name': 'goolf', 'version': '1.4.10'}
 
-
 source_urls = ['http://pypi.python.org/packages/source/o/%s/' % name.lower()]
-sources = ['%s-%s.tar.gz' % (name.lower(), version)]
+sources = [SOURCELOWER_TAR_GZ]
 
 python = "Python"
 pythonversion = '2.7.3'
@@ -19,9 +19,7 @@ pythonshortversion = ".".join(pythonversion.split(".")[:-1])
 
 versionsuffix = "-%s-%s" % (python, pythonversion)
 
-dependencies = [
-    (python, pythonversion),
-]
+dependencies = [(python, pythonversion)]
 
 sanity_check_paths = {
     'files': [],

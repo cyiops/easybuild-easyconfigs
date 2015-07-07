@@ -1,0 +1,29 @@
+easyblock = "PythonPackage"
+
+name = 'cartopy'
+version = '0.10.0'
+
+homepage = 'https://github.com/SciTools/cartopy/'
+description = """Cartopy is a Python package designed to make drawing maps
+for data analysis and visualisation easy."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+source_urls = ['https://pypi.python.org/packages/source/C/Cartopy']
+sources = [SOURCE_TAR_GZ]
+
+python = "Python"
+pythonversion = '2.7.3'
+pythonshortversion = ".".join(pythonversion.split(".")[:-1])
+
+versionsuffix = "-%s-%s" % (python, pythonversion)
+
+dependencies = [(python, pythonversion),
+		('GEOS','3.3.5'),
+		('PROJ','4.8.0'),
+		('Shapely','1.2.15',versionsuffix),
+		('pyshp','1.2.1',versionsuffix),
+	       ]
+
+
+moduleclass = 'data'

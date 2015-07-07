@@ -1,0 +1,28 @@
+easyblock = "PythonPackage"
+
+name = 'pyshp'
+version = '1.2.3'
+
+homepage = 'https://pypi.python.org/pypi/pyshp'
+description = """Pure Python read/write support for ESRI Shapefile format."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+source_urls = ['https://pypi.python.org/packages/source/p/%(name)s/']
+sources = [SOURCE_TAR_GZ]
+
+#sources = ['%s-master.zip' % (name)]
+#sources = ['https://github.com/SciTools/biggus/archive/master.zip']
+
+python = "Python"
+pythonversion = '2.7.3'
+pythonshortversion = ".".join(pythonversion.split(".")[:-1])
+
+versionsuffix = "-%s-%s" % (python, pythonversion)
+
+dependencies = [
+     (python, pythonversion),
+     ('setuptools','0.6c11',versionsuffix),
+]
+
+moduleclass = 'data'
