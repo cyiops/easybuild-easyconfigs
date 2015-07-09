@@ -13,23 +13,23 @@ sources = [SOURCELOWER_TGZ]
 
 skipsteps = ['configure']
 
-installopts = "INSTALL_DIR=%(installdir)s"
+installopts = "DESTDIR=%(installdir)s" 
 
 patches = [
-	'makefile.patch',
-	'param.patch',
-	'samtools.patch',
+     'BSMAP-2.74_makefile-modif.patch',
+     'BSMAP-2.74_parameters-cpp.patch',
+     'BSMAP-2.74_samtools-deps.patch',
 ]
 
 dependencies = [
-	('ncurses', '5.9'),
-	('zlib', '1.2.7'),
-	('SAMtools', '0.1.18'),
+     ('ncurses', '5.9'),
+     ('zlib', '1.2.7'),
+     ('SAMtools', '0.1.18'),
 ]
 
 sanity_check_paths = {
-    'files': ["bin/%s" % x for x in ["bsmap", "methratio.py", "sam2bam.sh"]],
-    'dirs': [],
+     'files': ["bin/%s" % x for x in ["bsmap", "methratio.py", "sam2bam.sh"]],
+     'dirs': [],
 }
 
-moduleclass = 'lang'
+moduleclass = 'data'

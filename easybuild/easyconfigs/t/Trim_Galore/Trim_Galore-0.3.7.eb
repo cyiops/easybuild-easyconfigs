@@ -1,6 +1,6 @@
 easyblock = "PackedBinary"
 
-name = 'Trim-Galore'
+name = 'Trim_Galore'
 version = '0.3.7'
 
 homepage = 'http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/'
@@ -26,4 +26,3 @@ sanity_check_paths = {
 }
 
 moduleclass = 'bio'
-
