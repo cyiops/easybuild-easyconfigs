@@ -1,3 +1,5 @@
+Patch to set the correct paths for CUDA
+Thekla Loizou July 2015
 --- lib/gpu/Makefile.linux.double.orig	2014-10-17 14:34:06.953493000 +0300
 +++ lib/gpu/Makefile.linux.double	2014-10-17 14:32:34.558367000 +0300
 @@ -7,7 +7,7 @@

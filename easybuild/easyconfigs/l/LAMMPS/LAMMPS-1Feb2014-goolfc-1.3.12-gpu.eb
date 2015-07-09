@@ -15,8 +15,8 @@ source_urls = [SOURCEFORGE_SOURCE]
 sources = [SOURCELOWER_TAR_GZ]
 
 patches = [
-    'Makefile.patch',
-    'gpu_package.patch',
+    'LAMMPS-1Feb2014_makefile-deps.patch',
+    'LAMMPS-1Feb2014_gpu_package.patch',
 ]
 
 prebuildopts = 'cd lib/gpu && make -f Makefile.linux && cd ../.. &&'

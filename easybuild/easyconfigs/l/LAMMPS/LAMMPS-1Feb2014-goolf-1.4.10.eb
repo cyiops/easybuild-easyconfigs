@@ -13,7 +13,7 @@ toolchainopts = {'pic': True}
 source_urls = [SOURCEFORGE_SOURCE]
 sources = [SOURCELOWER_TAR_GZ]
 
-patches = ['Makefile.patch']
+patches = ['LAMMPS-1Feb2014_makefile-deps.patch']
 
 prebuildopts = 'mkdir bin && cd src &&'
 

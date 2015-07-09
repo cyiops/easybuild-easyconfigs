@@ -10,10 +10,10 @@ MspI-digested RRBS-type (Reduced Representation Bisufite-Seq) libraries."""
 
 toolchain = {'name': 'dummy', 'version': 'dummy'}
 
-sources = ['trim_galore_v%s.zip' % version]
-source_urls = ['http://www.bioinformatics.babraham.ac.uk/projects/trim_galore']
+sources = ['%(namelower)s_v%(version)s.zip']
+source_urls = ['http://www.bioinformatics.babraham.ac.uk/projects/%(namelower)s']
 
-install_cmd = "cp -a trim_galore_zip/* %(installdir)s && chmod +x %(installdir)s/trim_galore"
+install_cmd = "cp -a %(namelower)s_zip/* %(installdir)s && chmod +x %(installdir)s/%(namelower)s"
 
 dependencies = [
      ('FastQC', '0.10.1', '-Java-1.7.0_21'),
