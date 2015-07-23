@@ -22,4 +22,6 @@ dependencies = [
     ('Szip', '2.1'),
 ]
 
+configopts = "--enable-threadsafe"
+
 moduleclass = 'data'

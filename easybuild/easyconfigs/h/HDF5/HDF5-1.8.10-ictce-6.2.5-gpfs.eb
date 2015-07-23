@@ -22,6 +22,6 @@ dependencies = [
     ('Szip', '2.1'),
 ]
 
-configopts = "--enable-gpfs"
+configopts = "--enable-gpfs --enable-threadsafe"
 
 moduleclass = 'data'

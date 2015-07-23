@@ -18,4 +18,6 @@ dependencies = [
 
 patches = ['configure_libtool.patch']
 
+configopts = "--enable-threadsafe"
+
 moduleclass = 'data'
