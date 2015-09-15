@@ -9,7 +9,11 @@ and evaluate mathematical expressions involving multi-dimensional arrays efficie
 
 toolchain = {'name': 'ictce', 'version': '5.3.0'}
 
+<<<<<<< HEAD
 source_urls = ['http://pypi.python.org/packages/source/T/%s' % name]
+=======
+source_urls = ['https://pypi.python.org/packages/source/T/%s' % name]
+>>>>>>> 242a3e19308754796c7dd800d2f9f6f40f6c9e14
 sources = [SOURCE_TAR_GZ]
 
 python = 'Python'

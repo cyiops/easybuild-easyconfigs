@@ -11,8 +11,13 @@ toolchain = {'name': 'goolf', 'version': '1.4.10'}
 source_urls = [PYPI_SOURCE]
 sources = [SOURCE_TAR_GZ]
 
+<<<<<<< HEAD
 python = "Python"
 pythonver = '2.7.3'
+=======
+python = 'Python'
+pyver = '2.7.3'
+>>>>>>> 242a3e19308754796c7dd800d2f9f6f40f6c9e14
 versionsuffix = '-%s-%s' % (python, pyver)
 
 dependencies = [(python, pyver)]
