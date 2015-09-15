@@ -42,7 +42,10 @@ ext_options = {
 }
 # Bioconductor packages have a different download url
 bioconductor_options = {
-    'source_urls': ['http://www.bioconductor.org/packages/2.13/bioc/src/contrib/'],
+    'source_urls': [
+	'http://www.bioconductor.org/packages/2.13/bioc/src/contrib/',
+	'http://bioconductor.org/packages/release/bioc/src/contrib/',
+    ],
     'source_tmpl': name_tmpl,
 }
 # !! order of packages is important !!
@@ -129,16 +132,26 @@ exts_list = [
     ('R.oo', '1.15.8', ext_options),
     ('R.matlab', '2.0.5', ext_options),
     ('Rniftilib', '0.0-32', ext_options),
-    ('BiocGenerics', '0.8.0', bioconductor_options),
+    ('gtools','3.5.0', ext_options),
+    ('XML', '3.98-1.3', ext_options),
+    ('BiocGenerics', '0.14.0', bioconductor_options),
     ('Biobase', '2.22.0', bioconductor_options),
     ('IRanges', '1.20.7', bioconductor_options),
     ('AnnotationDbi', '1.24.0', bioconductor_options),
-    ('XVector', '0.2.0', bioconductor_options),
-    ('Biostrings', '2.30.1', bioconductor_options),
-    ('GenomicRanges', '1.14.4', bioconductor_options),
+    ('XVector', '0.6.0', bioconductor_options),
+    ('Biostrings', '2.34.1', bioconductor_options),
+    ('GenomicRanges', '1.19.3', bioconductor_options),
     ('BSgenome', '1.30.0', bioconductor_options),
     ('zlibbioc', '1.6.0', bioconductor_options),
+    ('limma', '3.24.15', bioconductor_options),
+    ('edgeR', '3.10.2', bioconductor_options),
+    ('DNAcopy', '1.42.0', bioconductor_options),
+    ('S4Vectors', '0.4.0', bioconductor_options),
+    ('GenomeInfoDb', '1.2.4', bioconductor_options),
     ('Rsamtools', '1.14.3', bioconductor_options),
+    ('GenomicAlignments', '1.4.1', bioconductor_options),
+    ('rtracklayer', '1.28.10', bioconductor_options), 
+    ('MEDIPS','1.18.0', bioconductor_options),
     ('ShortRead', '1.20.0', bioconductor_options),
     ('graph', '1.40.1', bioconductor_options),
     ('igraph0', '0.5.7', ext_options),
