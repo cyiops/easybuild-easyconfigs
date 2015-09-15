@@ -1,0 +1,19 @@
+--- lib/gpu/Makefile.linux.double.orig	2015-09-08 13:09:52.556319127 +0300
++++ lib/gpu/Makefile.linux.double	2015-09-08 13:11:27.423996211 +0300
+@@ -7,7 +7,7 @@
+ 
+ EXTRAMAKE = Makefile.lammps.standard
+ 
+-CUDA_HOME = /usr/local/cuda
++CUDA_HOME = $(EBROOTCUDA)
+ NVCC = nvcc
+ 
+ # Kepler CUDA
+--- lib/gpu/Makefile.lammps.standard.orig	2015-09-08 13:44:07.000248886 +0300
++++ lib/gpu/Makefile.lammps.standard	2015-09-08 13:44:35.807450433 +0300
+@@ -2,4 +2,4 @@
+ 
+ gpu_SYSINC =
+ gpu_SYSLIB = -lcudart -lcuda
+-gpu_SYSPATH = -L/usr/local/cuda/lib64
++gpu_SYSPATH = -L$(EBROOTCUDA)/lib64

@@ -1,0 +1,28 @@
+--- src/MAKE/Makefile.mpi.orig	2015-09-08 13:46:36.057290967 +0300
++++ src/MAKE/Makefile.mpi	2015-09-08 13:47:54.957841800 +0300
+@@ -39,9 +39,9 @@
+ # PATH = path for MPI library
+ # LIB = name of MPI library
+ 
+-MPI_INC =       -DMPICH_SKIP_MPICXX -DOMPI_SKIP_MPICXX=1
+-MPI_PATH = 
+-MPI_LIB =	
++MPI_INC =       -I$(EBROOTOPENMPI)/include
++MPI_PATH =      -L$(EBROOTOPENMPI)/lib
++MPI_LIB =       -lmpi -lpthread
+ 
+ # FFT library
+ # see discussion in Section 2.2 (step 6) of manual
+@@ -50,9 +50,9 @@
+ # PATH = path for FFT library
+ # LIB = name of FFT library
+ 
+-FFT_INC =    	
+-FFT_PATH = 
+-FFT_LIB =	
++FFT_INC =       -DFFT_FFTW3
++FFT_PATH =      -L$(EBROOTFFTW)/lib
++FFT_LIB =       -lfftw3
+ 
+ # JPEG and/or PNG library
+ # see discussion in Section 2.2 (step 7) of manual
