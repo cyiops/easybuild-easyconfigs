@@ -1,0 +1,34 @@
+easyblock = "PackedBinary"
+
+name = 'bwa-meth'
+version = '0.10'
+
+homepage = 'https://github.com/brentp/bwa-meth'
+description = """Aligns BS-Seq reads and tabulates methylation without 
+intermediate temp files. This works for single-end reads and for paired-end 
+reads from the directional protocol (most common)."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+#source_urls = ['http://cutadapt.googlecode.com/files/']
+#sources = ['%(namelower)s-%(version)s.tar.gz']
+source_urls = ['https://github.com/brentp/bwa-meth']
+sources = ['bwa-meth-master.zip']
+
+python = 'Python'
+pyver = '2.7.3'
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+versionsuffix = "-%s-%s" % (python, pyver)
+
+dependencies = [
+    (python, pyver),
+    ('toolshed', '0.4.4', versionsuffix),
+]
+
+sanity_check_paths = {
+    'files': ['bwameth.py',],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

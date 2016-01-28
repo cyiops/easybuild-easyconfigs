@@ -1,0 +1,31 @@
+easyblock = "PythonPackage"
+
+name = 'toolshed'
+version = '0.4.4'
+
+homepage = 'https://pypi.python.org/pypi/toolshed'
+description = """Tools for data"""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+#source_urls = ['http://cutadapt.googlecode.com/files/']
+#sources = ['%(namelower)s-%(version)s.tar.gz']
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+python = 'Python'
+pyver = '2.7.3'
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+versionsuffix = "-%s-%s" % (python, pyver)
+
+dependencies = [
+    (python, pyver),
+]
+
+#sanity_check_paths = {
+#    'files': ['bin/cutadapt','lib/python2.7/site-packages/cutadapt/_align.so',],
+#    'dirs': [],
+#}
+
+moduleclass = 'bio'

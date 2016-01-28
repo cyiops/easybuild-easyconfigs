@@ -11,11 +11,12 @@ toolchain = {'name': 'intel', 'version': '2014b'}
 sources = [SOURCE_TAR_BZ2]
 source_urls = ['http://ffmpeg.org/releases/']
 
-configopts = '--enable-pic --enable-shared --enable-gpl --enable-version3 --enable-nonfree --cc="$CC" --cxx="$CXX"'
+configopts = '--enable-pic --enable-shared --enable-gpl --enable-version3 --enable-nonfree --enable-libx264 --cc="$CC" --cxx="$CXX"'
 
 dependencies = [
     ('NASM', '2.11.05'),
     ('zlib', '1.2.8'),
+    ('libx264','20151223-2245'),
 ]
 
 sanity_check_paths = {

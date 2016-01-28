@@ -1,0 +1,27 @@
+easyblock = 'ConfigureMake'
+
+name = 'libx264'
+version = '20151223-2245'
+
+homepage = 'http://ffmpeg.org/'
+description = """A complete, cross-platform solution to record, convert and stream audio and video."""
+
+toolchain = {'name': 'intel', 'version': '2014b'}
+toolchainopts = {'pic': True}
+#ftp://ftp.videolan.org/pub/x264/snapshots/x264-snapshot-20151223-2245-stable.tar.bz2
+sources = ['x264-snapshot-%(version)s-stable.tar.bz2']
+source_urls = ['ftp://ftp.videolan.org/pub/x264/snapshots/']
+
+configopts = '--enable-pic --enable-static --enable-shared --cc="$CC" --cxx="$CXX"'
+
+dependencies = [
+    ('Yasm', '1.2.0'),
+]
+
+
+sanity_check_paths = {
+    'files' : ['lib/libx264.so'],
+    'dirs' : ['lib'],
+}
+
+moduleclass = 'lib'

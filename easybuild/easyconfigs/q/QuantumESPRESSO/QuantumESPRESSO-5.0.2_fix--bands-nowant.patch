@@ -1,0 +1,15 @@
+--- espresso-5.0.2/PP/src/bands.f90.orig	2015-11-24 10:22:02.923484000 +0200
++++ espresso-5.0.2/PP/src/bands.f90	2015-11-24 10:22:25.233912308 +0200
+@@ -102,11 +102,11 @@
+   IF ( npool > 1 .and..not.(lsym.or.no_overlap)) CALL errore('bands', &
+                                              'pools not implemented',npool)
+ 
++  CALL read_file()
+   IF (gamma_only) CALL errore('bands','gamma_only case not implemented',1)
+   !
+   !   Now allocate space for pwscf variables, read and check them.
+   !
+-  CALL read_file()
+ 
+   IF (nproc_pool /= nproc_pool_file .and. .not. twfcollect)  &
+      CALL errore('bands',&

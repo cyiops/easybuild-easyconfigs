@@ -1,0 +1,29 @@
+easyblock = "PythonPackage"
+
+name = 'nltk'
+version = '3.1'
+
+homepage = 'http://www.nltk.org/'
+description = """NLTK is a leading platform for building Python programs to work with human language data."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+python = "Python"
+pythonversion = '2.7.3'
+pythonshortversion = ".".join(pythonversion.split(".")[:-1])
+
+versionsuffix = "-%s-%s" % (python, pythonversion)
+
+dependencies = [
+    (python, pythonversion),
+]
+
+#sanity_check_paths = {
+#    'files': [],
+#    'dirs': ['lib/python%s/site-packages/nltk' % pythonshortversion],
+#}
+
+moduleclass = 'vis'

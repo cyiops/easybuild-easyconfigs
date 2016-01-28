@@ -1,0 +1,25 @@
+easyblock = "PythonPackage"
+
+name = 'CosmoloPy'
+version = '0.1.104'
+
+homepage = 'https://github.com/roban/CosmoloPy'
+description = """a cosmology package for Python."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+python = 'Python'
+pyver = '2.7.3'
+versionsuffix = '-%s-%s' % (python, pyver)
+
+dependencies = [
+    (python, pyver),
+    ('numpy', '1.7.1', versionsuffix),
+]
+
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+moduleclass = 'tools'

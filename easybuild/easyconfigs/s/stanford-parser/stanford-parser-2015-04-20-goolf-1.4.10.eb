@@ -1,0 +1,27 @@
+easyblock = 'PackedBinary'
+
+name = 'stanford-parser'
+version = '2015-04-20'
+
+homepage = 'http://nlp.stanford.edu/software/lex-parser.shtml'
+description = """This package is a Java implementation of probabilistic 
+natural language parsers, both highly optimized PCFG and lexicalized 
+dependency parsers, and a lexicalized PCFG parser. """
+
+#toolchain = {'name': 'goolf', 'version': '1.4.10'}
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+sources = ['%s-full-%s.zip' % (name,version)]
+source_urls = ['http://nlp.stanford.edu/software/']
+
+dependencies = [
+	('Java', '1.8.0_20'),
+	('Python', '2.7.3', '-goolf-1.4.10'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/run-tb-preproc', 'lexparser.sh'],
+    'dirs': [],
+}
+
+moduleclass = 'devel'

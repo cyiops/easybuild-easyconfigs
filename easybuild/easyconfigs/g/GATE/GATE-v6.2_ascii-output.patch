@@ -1,0 +1,11 @@
+--- gate_v6.2/GateConfiguration.h.in.orig	2015-12-16 10:37:32.151822942 +0200
++++ gate_v6.2/GateConfiguration.h.in	2015-12-16 10:38:18.357225547 +0200
+@@ -8,7 +8,7 @@
+ #cmakedefine GATE_USE_ROOT                 @GATE_USE_ROOT@
+ #cmakedefine GATE_USE_OPTICAL              @GATE_USE_OPTICAL@
+ #cmakedefine GATE_ANALYSIS_USE_GENERAL     @GATE_ANALYSIS_USE_GENERAL@
+-#cmakedefine GATE_USE_FILE                 @GATE_USE_FILE@
++#cmakedefine GATE_ANALYSIS_USE_FILE        @GATE_ANALYSIS_USE_FILE@
+ #cmakedefine GATE_USE_LMF                  @GATE_USE_LMF@
+ #cmakedefine GATE_USE_ECAT7                @GATE_USE_ECAT7@
+ 

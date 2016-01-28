@@ -9,7 +9,7 @@
 easyblock = "Tarball"
 
 name = 'Bismark'
-version = '0.10.1'
+version = '0.14.5'
 
 homepage = 'http://www.bioinformatics.babraham.ac.uk/projects/bismark/'
 description = """A tool to map bisulfite converted sequence reads and 

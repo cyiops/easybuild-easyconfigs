@@ -1,0 +1,30 @@
+easyblock = 'RPackage'
+
+name = 'raster'
+version = '2.4-20'
+
+homepage = 'http://cran.r-project.org/web/packages/raster'
+description = """Reading, writing, manipulating, analyzing and modeling 
+of gridded spatial data. The package implements basic and high-level 
+functions. Processing of very large files is supported."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+source_urls = ['http://cran.r-project.org/src/contrib/']
+sources = ['%s_%s.tar.gz' % (name, version)]
+
+r = 'R'
+rver = '3.0.2'
+versionsuffix = '-%s-%s' % (r, rver)
+
+
+dependencies = [
+    (r, rver),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['raster'],
+}
+
+moduleclass = 'tools'
