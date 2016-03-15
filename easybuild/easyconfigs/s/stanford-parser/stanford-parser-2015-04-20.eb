@@ -1,17 +1,16 @@
 easyblock = 'PackedBinary'
 
 name = 'stanford-parser'
-version = '2008-10-26'
+version = '2015-04-20'
 
 homepage = 'http://nlp.stanford.edu/software/lex-parser.shtml'
 description = """This package is a Java implementation of probabilistic 
 natural language parsers, both highly optimized PCFG and lexicalized 
 dependency parsers, and a lexicalized PCFG parser. """
 
-#toolchain = {'name': 'goolf', 'version': '1.4.10'}
 toolchain = {'name': 'dummy', 'version': 'dummy'}
 
-sources = ['%s-%s.tgz' % (name,version)]
+sources = ['%s-full-%s.zip' % (name,version)]
 source_urls = ['http://nlp.stanford.edu/software/']
 
 dependencies = [
@@ -20,7 +19,7 @@ dependencies = [
 ]
 
 sanity_check_paths = {
-    'files': ['stanford-parser.jar', 'stanford-parser-2008-10-26.jar'],
+    'files': ['bin/run-tb-preproc', 'lexparser.sh'],
     'dirs': [],
 }
 
