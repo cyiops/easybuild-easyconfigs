@@ -4,8 +4,9 @@ name = 'astropy'
 version = '1.0.6'
 
 homepage = 'http://www.astropy.org/'
-description = """The Astropy Project is a community effort to develop a single core 
-package for Astronomy in Python and foster interoperability between Python astronomy packages."""
+description = """The Astropy Project is a community effort to develop 
+a single core package for Astronomy in Python and foster interoperability 
+between Python astronomy packages."""
 
 toolchain = {'name': 'goolf', 'version': '1.4.10'}
 
@@ -23,5 +24,10 @@ dependencies = [
 ]
 
 pyshortver = '.'.join(pyver.split('.')[:2])
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%s/site-packages' % pyshortver],
+}
 
 moduleclass = 'tools'
