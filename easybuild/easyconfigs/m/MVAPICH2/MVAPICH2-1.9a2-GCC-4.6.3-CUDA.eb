@@ -1,33 +1,23 @@
-name='MVAPICH2'
-version='1.9a2'
-versionsuffix='-CUDA'
+name = 'MVAPICH2'
+version = '1.9a2'
+versionsuffix = '-CUDA'
 
-homepage='http://mvapich.cse.ohio-state.edu/overview/mvapich2/'
-description="""This is an MPI-2 implementation (conforming to MPI 2.1 standard) which includes all MPI-1 features. 
-It is based on MPICH2 and MVICH."""
+homepage = 'http://mvapich.cse.ohio-state.edu/overview/mvapich2/'
+description = "This is an MPI-2 implementation (conforming to MPI 2.1 standard) which includes all MPI-1 features. It is based on  MPICH2 and MVICH."
 
-toolchain={'name':'GCC','version':'4.6.3'}
+toolchain = {'name': 'GCC', 'version': '4.6.3'}
 
-sources=['%s-%s.tgz'%(name.lower(),version)]
-# note: this URL will only work for the most recent version (previous versions no longer available?)
-source_urls=['http://mvapich.cse.ohio-state.edu/download/mvapich2']
+source_urls = ['http://mvapich.cse.ohio-state.edu/download/mvapich2/']
+sources = [SOURCELOWER_TGZ]
 
-## OFED support
-## libibcommon-devel no longer needed
-osdependencies=['libibverbs-devel', 'libibumad-devel'] 
+checksums = ['9d517d6fe483ad339ea01fa234f0c4c9']
 
-rdma_type="gen2" # 'gen2' or 'udapl'
+configopts = '--with-cuda'
 
-configopts=' --with-cuda'
+builddependencies = [('Bison', '2.7')]
+
 dependencies = [
-              ('CUDA', '5.0.35-1','',True)
-             ]
+    ('CUDA','5.0.35-1','', True)
+]
 
-
-## enable building of MPE routines
-withmpe=True
-
-## parallel build tends to fail
-parallel=1
-
-moduleclass='lib'
+moduleclass = 'mpi'

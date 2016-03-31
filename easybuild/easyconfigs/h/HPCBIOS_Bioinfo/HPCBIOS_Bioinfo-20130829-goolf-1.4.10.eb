@@ -22,7 +22,7 @@ description = """Bioinformatics & Computational Biology productivity environment
 toolchain = {'name': 'goolf', 'version': '1.4.10'}  # ie. build against the GNU compilers & OpenMPI stack
 
 dependencies = [
-    ('ALLPATHS-LG', '46968'),
+#    ('ALLPATHS-LG', '46968'),
     ('AMOS', '3.1.0'),
     ('BFAST', '0.7.0a'),
     ('BLAST+', '2.2.28', '-Python-2.7.3'),
@@ -42,7 +42,7 @@ dependencies = [
     ('FSL', '4.1.9'),
     ('GLIMMER', '3.02b'),
     ('GROMACS', '4.6.1', '-hybrid'),
-    ('HH-suite', '2.0.16'),
+#    ('HH-suite', '2.0.16'),
     ('HMMER', '3.0'),
     ('Infernal', '1.1rc1'),
     ('libgtextutils', '0.6.1'),
