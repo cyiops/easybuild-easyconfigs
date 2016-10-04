@@ -1,0 +1,22 @@
+--- beagle-lib-20120124/libhmsbeagle/CPU/Precision.h.orig	2016-04-19 12:43:06.954155232 +0300
++++ beagle-lib-20120124/libhmsbeagle/CPU/Precision.h	2016-04-19 12:43:53.271659441 +0300
+@@ -8,6 +8,8 @@
+ #ifndef PRECISION_H_
+ #define PRECISION_H_
+ 
++#include <cstring>
++
+ #define DOUBLE_PRECISION (sizeof(REALTYPE) == 8)
+ 
+ template<typename T, typename F> 
+--- beagle-lib-20120124/libhmsbeagle/GPU/Precision.h.orig	2016-04-19 12:44:39.527162003 +0300
++++ beagle-lib-20120124/libhmsbeagle/GPU/Precision.h	2016-04-19 12:45:00.574390556 +0300
+@@ -8,6 +8,8 @@
+ #ifndef GPU_PRECISION_H_
+ #define GPU_PRECISION_H_
+ 
++#include <cstring>
++	
+ template<typename T, typename F> 
+ inline void beagleMemCpy( T* to, F* from, unsigned int length )
+ {

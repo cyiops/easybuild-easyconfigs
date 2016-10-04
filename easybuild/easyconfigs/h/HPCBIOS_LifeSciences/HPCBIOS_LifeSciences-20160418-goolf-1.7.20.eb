@@ -13,25 +13,22 @@
 easyblock = "Bundle"
 
 name = 'HPCBIOS_LifeSciences'
-version = '20130829'
+version = '20160418'
 
 homepage = 'http://hpcbios.readthedocs.org/en/latest/HPCBIOS_2012-93.html'
 description = """Life Sciences productivity environment includes a set of HPC tools,
  which are needed for scientific computing and visualization in the respective domain."""
 
-toolchain = {'name': 'goolf', 'version': '1.4.10'}  # ie. build against the GNU compilers & OpenMPI stack
-
-# TODO: Vina, Dock
+toolchain = {'name': 'goolf', 'version': '1.7.20'}  # ie. build against the GNU compilers & OpenMPI stack
 
 dependencies = [
     ('BLAST+', '2.2.28', '-Python-2.7.3'),
-    ('BWA', '0.6.2'),
+    ('BWA', '0.7.13'),
     ('ClustalW2', '2.1'),
-    ('GROMACS', '4.6.1', '-hybrid'),
-    ('HMMER', '3.0'),
-    ('MrBayes', '3.1.2'),
+    ('GROMACS', '4.6.5', '-hybrid'),
+    ('HMMER', '3.1b2'),
+    ('MrBayes', '3.2.5'),
     ('mpiBLAST', '1.6.0'),
-#    ('Rosetta', '3.5'),
 ]
 
 moduleclass = 'bio'

@@ -1,0 +1,36 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# Copyright:: Copyright 2015-2016 The Cyprus Institute
+# Authors::   Thekla Loizou <t.loizou@cyi.ac.cy>
+# License::   MIT/GPL
+#
+##
+easyblock = "ConfigureMake"
+
+name = 'bcl2fastq'
+version = '1.8.4'
+
+homepage = 'http://support.illumina.com/downloads/bcl2fastq_conversion_software_184.html'
+description = """The bcl2fastq Conversion Software v1.8.4 software can be used to convert 
+BCL files from MiSeq and HiSeq sequencing systems running RTA versions earlier than 1.8"""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+sources = [SOURCELOWER_TAR_BZ2]
+source_urls = ['ftp://webdata:webdata@ussd-ftp.illumina.com/Downloads/Software/bcl2fastq']
+
+preconfigopts = 'cd src  && '
+builddependencies = [('CMake', '3.4.1')]
+
+dependencies = [('Doxygen', '1.8.3.1')]
+
+#files_to_copy = ["bin", "lib", "include", "docs", "LICENSE", "README"]
+
+#sanity_check_paths = {
+#    'files': ["bin/bamtools", "include/shared/bamtools_global.h", "lib/libbamtools.a",
+#              "lib/libbamtools.so", "lib/libbamtools-utils.a", "lib/libjsoncpp.a"],
+#    'dirs': ["include/api", "docs"]
+#}
+
+moduleclass = 'bio'
