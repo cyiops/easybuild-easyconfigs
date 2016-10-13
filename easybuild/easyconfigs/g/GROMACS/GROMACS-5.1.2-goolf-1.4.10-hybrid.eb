@@ -29,6 +29,8 @@ toolchainopts = {'openmp': True, 'usempi': True}
 source_urls = ['ftp://ftp.gromacs.org/pub/gromacs/']
 sources = [SOURCELOWER_TAR_GZ]
 
+patches = ['GROMACS-5.1.2_vdwradii.patch']
+
 builddependencies = [
     ('CMake', '3.4.1'),
     ('libxml2', '2.9.2')

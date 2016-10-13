@@ -23,7 +23,10 @@ dependencies = [
 
 parallel = 1
 
-patches = ['Ferret-lib64-hardcoded.patch']
+patches = [
+    'Ferret-lib64-hardcoded.patch',
+    'Ferret-%(version)s_dir.patch',
+]
 
 buildopts = 'LD="$CC"'
 

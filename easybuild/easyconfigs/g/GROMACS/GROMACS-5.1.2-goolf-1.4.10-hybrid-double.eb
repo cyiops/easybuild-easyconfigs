@@ -31,6 +31,8 @@ sources = [SOURCELOWER_TAR_GZ]
 
 configopts = '-DGMX_DOUBLE=ON'
 
+patches = ['GROMACS-5.1.2_vdwradii.patch']
+
 builddependencies = [
     ('CMake', '3.4.1'),
     ('libxml2', '2.9.2')

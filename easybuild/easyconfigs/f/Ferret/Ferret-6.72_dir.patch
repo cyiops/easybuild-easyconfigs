@@ -1,0 +1,11 @@
+--- FERRET/bin/ferret_paths_template.sh.orig	2016-10-13 11:06:13.152537980 +0300
++++ FERRET/bin/ferret_paths_template.sh	2016-10-13 11:06:28.936679970 +0300
+@@ -5,7 +5,7 @@
+ 
+ ## The environment variable FER_DIR should be the pathname of
+ ## the directory you created for the FERRET software.
+-export FER_DIR="/usr/local/ferret"
++export FER_DIR="${EBROOTFERRET}"
+ 
+ ## The environment variable FER_DSETS should be the pathname of
+ ## the directory you created for the FERRET demonstration data files (30+ Mbytes).

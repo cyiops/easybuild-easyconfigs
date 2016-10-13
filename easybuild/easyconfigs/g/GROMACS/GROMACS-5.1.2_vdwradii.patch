@@ -1,0 +1,11 @@
+--- gromacs-5.1.2/share/top/vdwradii.dat.orig	2015-06-22 16:17:54.000000000 +0300
++++ gromacs-5.1.2/share/top/vdwradii.dat	2016-10-12 10:24:58.246017041 +0300
+@@ -14,6 +14,8 @@
+ ???  P     0.18
+ ???  S     0.18
+ ???  Cl    0.175
++???  Zn    0.123
++???  Li    0.05
+ ; Water charge sites
+ SOL  MW    0
+ SOL  LP    0
