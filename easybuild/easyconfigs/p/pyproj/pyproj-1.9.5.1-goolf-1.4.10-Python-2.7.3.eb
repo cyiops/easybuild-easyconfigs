@@ -1,0 +1,28 @@
+easyblock = 'PythonPackage'
+
+name = 'pyproj'
+version = '1.9.5.1'
+
+homepage = 'https://pypi.python.org/pypi/pyproj'
+description = """Performs cartographic transformations and geodetic computations."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+pyver = '2.7.3'
+versionsuffix = '-Python-%s' % pyver
+dependencies = [
+    ('PROJ', '4.8.0'),
+]
+
+
+#pyshortver = '.'.join(pyver.split('.')[:2])
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib64/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'vis'

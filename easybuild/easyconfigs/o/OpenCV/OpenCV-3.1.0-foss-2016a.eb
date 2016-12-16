@@ -18,6 +18,8 @@ builddependencies = [
     ('CMake', '3.5.2'),
 ]
 
+patches = ['OpenCV-3.1.0_matchers.patch']
+
 dependencies = [
     ('Python', '2.7.11'),
     ('zlib', '1.2.8'),

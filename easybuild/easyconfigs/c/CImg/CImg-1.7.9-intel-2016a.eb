@@ -1,0 +1,26 @@
+easyblock = "MakeCp"
+
+name = 'CImg'
+version = '1.7.9'
+
+homepage = 'http://cimg.eu/'
+description = "The CImg Library is a small, open-source and modern C++ toolkit for image processing"
+
+toolchain = {'name': 'intel', 'version': '2016a'}
+
+sources = ['CImg_latest.zip']
+source_urls = ['http://cimg.eu/files/']
+
+#with_configure = True
+
+#prebuildopts = 'mkdir include && mv Cimg.h include/ && '
+skipsteps = ['build']
+
+files_to_copy = [(['CImg.h'],'include')]
+
+sanity_check_paths = {
+    'files': ['include/CImg.h'],
+    'dirs': ['include'],
+}
+
+moduleclass = 'lib'

@@ -1,0 +1,30 @@
+easyblock = 'ConfigureMake'
+
+name = 'pHash'
+version = '0.9.6'
+
+homepage = 'http://www.phash.org/'
+description = """A perceptual hash is a fingerprint of a multimedia file derived 
+from various features from its content. Unlike cryptographic hash functions which 
+rely on the avalanche effect of small changes in input leading to drastic changes 
+in the output, perceptual hashes are "close" to one another if the features are similar."""
+
+toolchain = {'name': 'intel', 'version': '2016a'}
+toolchainopts = {'pic': True}
+
+source_urls = ['http://www.phash.org/releases']
+sources = [SOURCE_TAR_GZ]
+
+configopts = "--disable-audio-hash --disable-pthread "
+
+
+dependencies = [
+    ('FFmpeg', '2.8.6'),
+    ('CImg', '1.7.9'),
+]
+
+sanity_check_paths = {
+    'files': ['lib/libpHash.so'],
+    'dirs': ['include','lib'],
+}
+moduleclass = 'math'

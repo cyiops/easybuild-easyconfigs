@@ -1,6 +1,6 @@
 name = 'perftest'
 version = '1.5'
-
+easyblock = 'ConfigureMake'
 homepage = 'ftp://ftp.mcs.anl.gov/pub/mpi/tools/'
 description = """MPI tests"""
 
