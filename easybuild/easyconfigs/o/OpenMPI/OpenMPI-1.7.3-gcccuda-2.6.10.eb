@@ -26,7 +26,7 @@ dependencies = [('hwloc', '1.8')]
 configopts = '--with-threads=posix --enable-shared --enable-mpi-thread-multiple --with-verbs '
 configopts += '--enable-mpirun-prefix-by-default '  # suppress failure modes in relation to mpirun path
 configopts += '--with-hwloc=$EBROOTHWLOC '  # hwloc support
-configopts += '--with-cuda=$CUDA_HOME '             # CUDA-aware build; N.B. --disable-dlopen is incompatible
+configopts += '--with-cuda=$EBROOTCUDA '             # CUDA-aware build; N.B. --disable-dlopen is incompatible
 
 # needed for --with-verbs
 osdependencies = [('libibverbs-dev', 'libibverbs-devel')]

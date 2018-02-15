@@ -20,6 +20,7 @@ dependencies = [
                 ('netCDF', '4.2.1.1'),
     		('HDF5', '1.8.10-patch1'),
     		('UDUNITS', '2.1.24'),
+		('GSL', '1.16'),
                ]
 
 moduleclass = 'data'

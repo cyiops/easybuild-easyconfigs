@@ -38,6 +38,10 @@ dependencies = [
     ('GDAL', '2.0.2'),  # for rgdal
     ('PROJ', '4.9.2'), # for rgdal
     ('GMP', '6.1.0'),  # for igraph
+    ('NLopt', '2.4.2'),  # for nloptr
+    ('Mesa', '11.1.2'),
+    ('libGLU', '9.0.0'),
+    ('netCDF', '4.3.3.1'),
 ]
 
 name_tmpl = '%(name)s_%(version)s.tar.gz'
@@ -79,6 +83,10 @@ exts_list = [
     ('deal', '1.2-37', ext_options),
     ('fdrtool', '1.2.15', ext_options),
     ('formatR', '1.2.1', ext_options),
+    ('RandomFieldsUtils','0.3.15', ext_options),
+    ('RandomFields', '3.1.36', ext_options),
+    ('splancs', '2.01-40', ext_options), 
+    ('geoR', '1.7-5.2', ext_options),
     ('gtools', '3.5.0', ext_options),
     ('gdata', '2.17.0', ext_options),
     ('GSA', '1.03', ext_options),
@@ -454,6 +462,11 @@ exts_list = [
     ('lubridate', '1.5.6', ext_options),
     ('biom', '0.3.12', ext_options),
     ('pim', '2.0.0.2', ext_options),
+    ('intervals', '0.15.1', ext_options),
+    ('spacetime', '1.2-1', ext_options),
+    ('gstat', '1.1-5', ext_options),
+    ('ncdf4', '1.16', ext_options),
+    ('RGeostats','11.0.5', ext_options),
 ]
 
 moduleclass = 'lang'

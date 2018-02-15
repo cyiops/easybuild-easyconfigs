@@ -1,0 +1,37 @@
+easyblock = "MakeCp"
+
+name = "LAMMPS"
+version = "11Aug17"
+
+homepage = 'http://lammps.sandia.gov/'
+description = """LAMMPS is a classical molecular dynamics code,
+and an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator."""
+
+toolchain = {'name': 'goolf', 'version': '1.4.10'}
+toolchainopts = {'pic': True}
+
+#source_urls = [SOURCEFORGE_SOURCE]
+sources = ['lammps-11Aug17.tar.gz']
+
+patches = ['LAMMPS-11Aug17_makefile-deps.patch']
+
+prebuildopts = 'mkdir bin && cd src &&'
+
+buildopts = 'mpi && cp lmp_mpi ../bin'
+
+#files_to_copy = ["bench", "bin", "doc", "examples", "lib/atc/*", "lib/atc", "lib/awpmd", 
+#                 "lib/colvars", "lib/compress", "lib/gpu", "lib/h5md", "lib/Install.py", 
+#                 "lib/kim", "lib/linalg", "lib/meam", "lib/molfile", "lib/mscg", "lib/netcdf", 
+#                 "lib/poems", "lib/python", "lib/qmmm", "lib/quip", "lib/README", "lib/reax", 
+#                 "lib/smd", "lib/voronoi", "lib/vtk", "LICENSE", "potentials", "python", 
+#                 "README", "src", "tools"]
+
+files_to_copy = ["bench", "bin", "doc", "examples", "lib", "LICENSE", "potentials", 
+                 "python", "README", "src", "tools"]
+
+
+sanity_check_paths = {
+    'files': ['bin/lmp_mpi'],
+    'dirs': [],
+}
+moduleclass = 'chem'
