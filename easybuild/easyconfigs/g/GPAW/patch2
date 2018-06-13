@@ -1,0 +1,11 @@
+--- /dev/shm/GPAW/1.3.0/foss-2017a-Python-2.7.13/gpaw-1.3.0/config.py.orig	2017-09-12 13:49:51.000000000 +0300
++++ /dev/shm/GPAW/1.3.0/foss-2017a-Python-2.7.13/gpaw-1.3.0/config.py	2018-06-13 12:04:30.853452942 +0300
+@@ -142,7 +142,7 @@
+                     libdir = dir
+                     break
+             openblas = False
+-            for dir in ['/usr/lib', '/usr/local/lib', '/usr/lib64']:
++            for dir in ['/usr/lib', '/usr/local/lib', '/usr/lib64', '/gpfs/buildsets/eb180212/software/OpenBLAS/0.2.19-GCC-6.3.0-2.27-LAPACK-3.7.0/lib']:
+                 if glob(join(dir, 'libopenblas.so')) != []:
+                     openblas = True
+                     libdir = dir

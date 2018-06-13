@@ -148,12 +148,12 @@ exts_list = [
             'd04bb2425086c3fe86f7bc48915290b13e798497839fbb18ab7f6dffcf98cc3a',  # cryptography-2.0.3.tar.gz
         ],
     }),
-    ('paramiko', '2.2.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/paramiko/'],
-        'checksums': [
-            'ff94ae65379914ec3c960de731381f49092057b6dd1d24d18842ead5a2eb2277',  # paramiko-2.2.1.tar.gz
-        ],
-    }),
+    #('paramiko', '2.2.1', {
+    #    'source_urls': ['https://pypi.python.org/packages/source/p/paramiko/'],
+    #    'checksums': [
+    #        'ff94ae65379914ec3c960de731381f49092057b6dd1d24d18842ead5a2eb2277',  # paramiko-2.2.1.tar.gz
+    #    ],
+    #}),
     ('pyparsing', '2.2.0', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pyparsing/'],
         'checksums': [
